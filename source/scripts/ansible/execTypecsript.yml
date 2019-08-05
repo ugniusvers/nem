@@ -1,0 +1,6 @@
+---
+ - hosts: 127.0.0.1
+   become: true
+   tasks:
+           - name: Generate new account
+             shell: ts-node ../../resources/typescript/account/createAccount.ts
