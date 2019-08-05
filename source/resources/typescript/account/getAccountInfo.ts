@@ -16,11 +16,12 @@
  *
  */
 
-import {AccountHttp, Address} from "nem2-sdk";
+import {AccountHttp, Address, NetworkType} from "nem2-sdk";
 
 /* start block 01 */
 const accountHttp = new AccountHttp('http://localhost:3000');
-const address = Address.createFromRawAddress('SC4QVM-NATZI3-MFX3FC-7JJ2GJ-OZLAXC-XKOHMP-IDNC');
+const publicKey = process.env.PUBLIC_KEY as string;
+const address = Address.createFromPublicKey(publicKey, NetworkType.MIJIN_TEST);
 
 accountHttp
     .getAccountInfo(address)
