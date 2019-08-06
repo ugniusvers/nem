@@ -23,11 +23,11 @@ const accountHttp = new AccountHttp('http://localhost:3000');
 var add;
 
 import fs from 'fs';
-fs.readFile('../../generatedAddresses/publicKey.txt', function (err, data) {
+fs.readFile('../../generatedAddresses/address.txt', function (err, data) {
     if (err) {
         return console.error(err);
     }
-    console.log("Public key read: " + data.toString());
+    console.log("Address read: " + data.toString());
     add = data.toString();
 });
 
