@@ -27,11 +27,11 @@ cd nem
 -
 ansible-playbook nem/source/scripts/ansible/execTypecsript.yml
 
-Generate new account (Private, public key and address
-Register Namespace
-Register SubNamespace
-Create Mosaic
-Modify Mosaic
-Send Mosaic
+Generate new account (Private, public key and address  
+Register Namespace  
+Register SubNamespace  
+Create Mosaic  
+Modify Mosaic  
+Send Mosaic  
 
 (https://github.com/ugniusvers/nem/blob/master/source/scripts/ansible/execTypecsript.yml)  
