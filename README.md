@@ -27,7 +27,7 @@ cd nem
 -
 ansible-playbook nem/source/scripts/ansible/execTypecsript.yml
 
-Generate new account (Private, public key and address  
+Generate new account (Private, public key and address)  
 Register Namespace  
 Register SubNamespace  
 Create Mosaic  
