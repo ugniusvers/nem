@@ -23,7 +23,7 @@ const namespaceName = "test";
 var priv;
 
 import fs from 'fs';
-fs.readFile('./../generatedAddresses/privateKey.txt', function (err, data) {
+fs.readFile('../../generatedAddresses/privateKey.txt', function (err, data) {
     if (err) {
         return console.error(err);
     }
@@ -37,7 +37,7 @@ const registerNamespaceTransaction = RegisterNamespaceTransaction.createRootName
     UInt64.fromUint(1000),
     NetworkType.MIJIN_TEST);
 
-const privateKey = priv.toString();
+const privateKey = priv;
 const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
 const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
 const signedTransaction = account.sign(registerNamespaceTransaction, networkGenerationHash);

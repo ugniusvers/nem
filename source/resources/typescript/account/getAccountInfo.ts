@@ -23,7 +23,7 @@ const accountHttp = new AccountHttp('http://localhost:3000');
 var pub;
 
 import fs from 'fs';
-fs.readFile('./../generatedAddresses/publicKey.txt', function (err, data) {
+fs.readFile('../../generatedAddresses/publicKey.txt', function (err, data) {
     if (err) {
         return console.error(err);
     }
@@ -31,7 +31,7 @@ fs.readFile('./../generatedAddresses/publicKey.txt', function (err, data) {
     pub = data.toString();
 });
 
-const publicKey = pub.toString();
+const publicKey = pub;
 const address = Address.createFromPublicKey(publicKey, NetworkType.MIJIN_TEST);
 
 accountHttp
