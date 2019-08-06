@@ -11,15 +11,15 @@ git clone https://github.com/ugniusvers/nem
 
 --- 2 STEP - configure Virtual Machine, download files and start NEM Network
 -
-chmod +x nem/source/scripts/shell/*
+chmod +x nem/source/scripts/shell/*  
 ./nem/source/scripts/shell/startNEM.sh
 
 (https://github.com/ugniusvers/nem/blob/master/source/scripts/shell/startNEM.sh)
 
 --- 3 STEP - prepare environment in nem directory
 -
-cd nem
-and execute ./source/scripts/shell/prepareEnvironment.sh
+cd nem  
+./source/scripts/shell/prepareEnvironment.sh
 
 (https://github.com/ugniusvers/nem/blob/master/source/scripts/shell/prepareEnvironment.sh)
 
