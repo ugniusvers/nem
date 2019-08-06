@@ -25,7 +25,7 @@ cd nem
 
 --- 4 STEP - execute prepared ansible script (make sure NEM network is running !)
 -
-ansible-playbook nem/source/scripts/ansible/execTypecsript.yml
+ansible-playbook source/scripts/ansible/execTypecsript.yml
 
 Generate new account (Private, public key and address)  
 Register Namespace  
