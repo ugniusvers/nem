@@ -20,6 +20,10 @@ import {Account, NetworkType} from "nem2-sdk";
 
 /* start block 01 */
 const account = Account.generateNewAccount(NetworkType.MIJIN_TEST);
+const fs = require('fs');
 
 console.log('Your new account address is:', account.address.pretty(), 'and its private key', account.privateKey);
+
+fs.writeFile('privateKey.txt', account.privateKey);
+fs.writeFile('address.txt', account.address);
 /* end block 01 */
