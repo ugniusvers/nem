@@ -2,7 +2,7 @@
 NEM files, typescript, shell scripts, ansible playbooks
 
 HOW TO START NEM NETWORK AND MAKE FIRST TRANSACTIONS
-
+-
 ------ STEP BY STEP ------
 
 --- 1 STEP - clone this github to your system
@@ -19,7 +19,7 @@ chmod +x nem/source/scripts/shell/*
 --- 3 STEP - prepare environment in nem directory
 -
 cd nem
-./nem/source/scripts/shell/prepareEnvironment.sh
+and execute ./source/scripts/shell/prepareEnvironment.sh
 
 (https://github.com/ugniusvers/nem/blob/master/source/scripts/shell/prepareEnvironment.sh)
 
