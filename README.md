@@ -1,12 +1,17 @@
 # NEM
 
-NEM files, typescript
+NEM files, typescript, shell scripts, ansible playbooks
+
+
+HOW TO
 
 ------ STEP BY STEP ------
 
 --- 1 STEP - clone this github to your system
 
 git clone https://github.com/ugniusvers/nem
+
+
 
 --- 2 STEP - configure Virtual Machine, download files and start NEM Network
 
@@ -15,6 +20,8 @@ chmod +x nem/source/scripts/shell/*
 
 (https://github.com/ugniusvers/nem/blob/master/source/scripts/shell/startNEM.sh)
 
+
+
 --- 3 STEP - prepare environment in nem directory
 
 cd nem
@@ -22,7 +29,9 @@ cd nem
 
 (https://github.com/ugniusvers/nem/blob/master/source/scripts/shell/prepareEnvironment.sh)
 
---- 4 STEP execute prepared ansible script (make sure NEM network is running !)
+
+
+--- 4 STEP - execute prepared ansible script (make sure NEM network is running !)
 
 ansible-playbook nem/source/scripts/ansible/execTypecsript.yml
 
