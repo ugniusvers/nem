@@ -4,7 +4,3 @@
    tasks:
            - name: Generate new account
              shell: ts-node ../../resources/typescript/account/createAccount.ts
-           - name: Get Account info
-             shell: ts-node ../../resources/typescript/account/getAccountInfo.ts
-           - name: Get private key
-             shell: ts-node ../../resources/typescript/account/test.ts

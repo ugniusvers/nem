@@ -24,6 +24,18 @@ const fs = require('fs');
 
 console.log('Your new account address is:', account.address.pretty(), 'and its private key', account.privateKey);
 
-fs.writeFile('privateKey.txt', account.privateKey);
-fs.writeFile('address.txt', account.address);
+fs.writeFile('privateKey.txt', account.privateKey,  function(err) {
+    if (err) {
+        return console.error(err);
+    }
+    console.log("Private key file created!");
+});
+
+fs.writeFile('address.txt', account.address,  function(err) {
+    if (err) {
+        return console.error(err);
+    }
+    console.log("Address file created!");
+});
+
 /* end block 01 */
