@@ -7,3 +7,6 @@ sudo apt-get -y install ansible
 # Install typescript and ts-node
 npm install -g typescript
 npm install -g ts-node
+
+# create node_modules directory
+npm install
