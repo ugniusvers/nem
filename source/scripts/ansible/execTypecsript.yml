@@ -4,3 +4,9 @@
    tasks:
            - name: Generate new account
              shell: ts-node ../../resources/typescript/account/createAccount.ts
+           - name: Get account info
+             shell: ts-node ../../resources/typescript/account/getAccountInfo.ts
+           - name: Register Namespace
+             shell: ts-node ../../resources/typescript/account/registerNamespace.ts
+           - name: Get account info
+             shell: ts-node ../../resources/typescript/account/getAccountInfo.ts
