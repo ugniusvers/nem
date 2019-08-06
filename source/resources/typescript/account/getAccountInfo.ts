@@ -20,7 +20,7 @@ import {AccountHttp, Address, NetworkType} from "nem2-sdk";
 
 /* start block 01 */
 const accountHttp = new AccountHttp('http://localhost:3000');
-var pub;
+var add;
 
 import fs from 'fs';
 fs.readFile('../../generatedAddresses/publicKey.txt', function (err, data) {
@@ -28,11 +28,10 @@ fs.readFile('../../generatedAddresses/publicKey.txt', function (err, data) {
         return console.error(err);
     }
     console.log("Public key read: " + data.toString());
-    pub = data.toString();
+    add = data.toString();
 });
 
-const publicKey = pub;
-const address = Address.createFromPublicKey(publicKey, NetworkType.MIJIN_TEST);
+const address = add;
 
 accountHttp
     .getAccountInfo(address)

@@ -37,8 +37,8 @@ fs.writeFile('../../generatedAddresses/publicKey.txt', account.publicKey,  funct
     }
     console.log("Public key file created!");
 });
-
-fs.writeFile('../../generatedAddresses/address.txt', account.address.plain,  function(err) {
+var add = account.address.plain;
+fs.writeFile('../../generatedAddresses/address.txt', add,  function(err) {
     if (err) {
         return console.error(err);
     }
