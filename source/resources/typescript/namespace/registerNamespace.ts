@@ -32,7 +32,7 @@ fs.readFile('../../generatedAddresses/privateKey.txt', function (err, data) {
     priv = data.toString();
 });
 
-fs.readFile('../../generatedAddresses/generationHash', function (err, data) {
+fs.readFile('../../generatedAddresses/generationHash.txt', function (err, data) {
     if (err) {
         return console.error(err);
     }
