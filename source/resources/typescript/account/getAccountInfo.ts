@@ -31,7 +31,10 @@ fs.readFile('../../generatedAddresses/publicKey.txt', function (err, data) {
     pub = data.toString();
 });
 
+console.log(pub);
+
 const address = Address.createFromPublicKey(pub, NetworkType.MIJIN_TEST);
+console.log(address);
 accountHttp
     .getAccountInfo(address)
     .subscribe(accountInfo => console.log(accountInfo), err => console.error(err));

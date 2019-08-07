@@ -21,6 +21,7 @@ import {Account, Deadline, NetworkType, RegisterNamespaceTransaction, Transactio
 /* start block 01 */
 const namespaceName = "test";
 var priv;
+var genHash;
 
 import fs from 'fs';
 fs.readFile('../../generatedAddresses/privateKey.txt', function (err, data) {
@@ -31,6 +32,15 @@ fs.readFile('../../generatedAddresses/privateKey.txt', function (err, data) {
     priv = data.toString();
 });
 
+import fs from 'fs';
+fs.readFile('../../generatedAddresses/generationHash', function (err, data) {
+    if (err) {
+        return console.error(err);
+    }
+    console.log("Gen hash read: " + data.toString());
+    genHash = data.toString();
+});
+
 const registerNamespaceTransaction = RegisterNamespaceTransaction.createRootNamespace(
     Deadline.create(),
     namespaceName,
@@ -39,7 +49,7 @@ const registerNamespaceTransaction = RegisterNamespaceTransaction.createRootName
 
 const privateKey = priv;
 const account = Account.createFromPrivateKey(privateKey, NetworkType.MIJIN_TEST);
-const networkGenerationHash = process.env.NETWORK_GENERATION_HASH as string;
+const networkGenerationHash = genHash;
 const signedTransaction = account.sign(registerNamespaceTransaction, networkGenerationHash);
 
 const transactionHttp = new TransactionHttp('http://localhost:3000');
