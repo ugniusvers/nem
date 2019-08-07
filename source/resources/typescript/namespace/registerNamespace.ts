@@ -32,7 +32,6 @@ fs.readFile('../../generatedAddresses/privateKey.txt', function (err, data) {
     priv = data.toString();
 });
 
-import fs from 'fs';
 fs.readFile('../../generatedAddresses/generationHash', function (err, data) {
     if (err) {
         return console.error(err);
