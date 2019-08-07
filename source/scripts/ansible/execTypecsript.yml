@@ -4,6 +4,8 @@
    tasks:
            - name: Generate new account
              shell: ts-node ../../resources/typescript/account/createAccount.ts
+           - name: Opening An Account Wallet
+             shell: ./../shell/openAnAccountWallet.sh
            - name: Get account info
              shell: ts-node ../../resources/typescript/account/getAccountInfo.ts
            - name: Register Namespace
